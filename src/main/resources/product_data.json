@@ -1,0 +1,20 @@
+[
+  {
+    "pictureUrl": "https://img-trendyol.mncdn.com//Assets/ProductImages/oa/68/4496091/1/8699440498021_1_org.jpg",
+    "type": "Elbise",
+    "description": {
+      "marka": "Xhan"
+    },
+    "name": "Kadın Siyah Çiçek Desenli Kruvaze Elbise",
+    "id": "1"
+  },
+  {
+    "pictureUrl": "https://img-trendyol.mncdn.com//Assets/ProductImages/oa/68/4496092/1/8699440498161_1_org.jpg",
+    "type": "Elbise",
+    "description": {
+      "marka": "Xhan"
+    },
+    "name": "Etnik Desenli Kruvaze Elbise",
+    "id": "2"
+  }
+]
