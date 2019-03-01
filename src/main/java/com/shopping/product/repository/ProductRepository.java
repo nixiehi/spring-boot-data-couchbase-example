@@ -10,5 +10,4 @@ import org.springframework.stereotype.Repository;
 @ViewIndexed(designDoc = "product")
 @Repository
 public interface ProductRepository extends CouchbasePagingAndSortingRepository<Product, String> {
-
 }

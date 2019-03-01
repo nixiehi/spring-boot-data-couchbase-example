@@ -12,7 +12,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -48,12 +47,14 @@ public class ProductControllerUnitTest {
         when(service.getAll(0, 2)).thenReturn(products);
 
         this
-                .mockMvc.perform(get("/api/v1/products")).andExpect(status().isOk())
+                .mockMvc.perform(get("/api/v1/products")
+                .param("page", "0")
+                .param("size", "2")).andExpect(status().isOk())
                 .andExpect(content().json(objectMapper.writeValueAsString(products)));
     }
 
     private PageWrapper pageOf(Product... product) {
-        return new PageWrapper<Product>(new PageImpl<>(List.of(product)));
+        return new PageWrapper<>(new PageImpl<>(List.of(product)));
     }
 
 }
